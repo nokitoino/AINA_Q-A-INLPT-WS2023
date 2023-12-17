@@ -31,6 +31,12 @@ Copyright (c) 2023.
 
 This code has been developed as part of the "NLP with Transformer Project" project.
 
+Teamates contribution(as of now):
+1. Anu Reddy:
+   - Performed data analysis on the documents from pubmed url link.
+   - Performed data retrieval on the combined documents in ndjson format (provided by akin)via writing queries in elasticsearch in Python( and cross-verified in kibana) and optimized the queries to retrieve the documents using both keyword and vector search on the textual components of the dataset(title and abstract).
+   - Performed some test queries by providing the questions as input and retrieving the corresponding documents along with their cosine similarity scores.
+
 ## Requirements
 
 ### Software Dependencies
@@ -96,6 +102,5 @@ Contributions are very welcome! Here's how to get involved:
 (Include additional details on development environment setup, coding style, testing, and issue reporting as needed.)
 
 ---
-**Author:** Your Name <br>
-**Contact:** [your@email.com](mailto:your@email.com)
+
 
