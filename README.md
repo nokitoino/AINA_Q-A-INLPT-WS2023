@@ -39,6 +39,13 @@ Teamates contribution(as of now):
 2. Akin Yilmaz:
    - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
    - Testing a parallel Pipeline using Haystack for the entire workflow. So far implemented the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever.
+3. Nilesh Rijhwani:
+   - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping:
+      - Using Python scheduler library - APScheduler
+      - Also storing the last scrapped date in a text file amd using functions to access and update the same before putting it in query.
+   - Defined a chunk size of 1000 to start working on the experimental phase where the inout json from the webscrapping (papers.json) is brokendown in to defined chunksize and stored as json which later will be used in ambedding.py as an input to our ambedding function
+   - Working on embedding model and function, current decision - 'text_davinci_003' which is gonna be deprectaed in jan 2024, next model --> gpt-3.5-turbo-1106
+      - Implemented the Embedding model for PubMed Documents using OpenAI's GPT-3 API.
 ## Requirements
 
 ### Software Dependencies
