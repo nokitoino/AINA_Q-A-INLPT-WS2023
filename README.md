@@ -34,9 +34,11 @@ This code has been developed as part of the "NLP with Transformer Project" proje
 Teamates contribution(as of now):
 1. Anu Reddy:
    - Performed data analysis on the documents from pubmed url link.
-   - Performed data retrieval on the combined documents in ndjson format (provided by akin)via writing queries in elasticsearch in Python( and cross-verified in kibana) and optimized the queries to retrieve the documents using both keyword and vector search on the textual components of the dataset(title and abstract).
+   - Performed data retrieval on the combined documents in ndjson format (provided by akin) via writing queries in elasticsearch in Python( and cross-verified in kibana) and optimized the queries to retrieve the documents using both keyword and vector search on the textual components of the dataset(title and abstract).
    - Performed some test queries by providing the questions as input and retrieving the corresponding documents along with their cosine similarity scores.
-
+2. Akin Yilmaz:
+   - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
+   - Testing a parallel Pipeline using Haystack for the entire workflow. So far implemented the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever.
 ## Requirements
 
 ### Software Dependencies
