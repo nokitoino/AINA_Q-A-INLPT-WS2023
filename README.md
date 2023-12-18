@@ -10,7 +10,7 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 
 High-end architecture:
 
-![project_QA_arch](https://github.com/nokitoino/_Q-A-INLPT-WS2023/assets/35266536/1d1f21cd-3d71-4c81-a633-87bfaae8dd61)
+![project_QA1](https://github.com/nokitoino/_Q-A-INLPT-WS2023/assets/35266536/1467df8a-d646-424e-9cf4-2670c4cbeb02)
 
 There are two phases to the project architecture:
 Retrieval of the relevant documents 
