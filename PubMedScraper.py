@@ -4,7 +4,7 @@ import json
 from datetime import datetime, timedelta
 
 # Set your email address for the Entrez API
-Entrez.email = "gustafimeri@gmail.com"
+Entrez.email = "EMAIL here"
 
 
 def fetch_details(id_list):
