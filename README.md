@@ -1,3 +1,12 @@
+Github UserName Mapping
+
+| UserName     | StudentName | Matrikelnummer     |
+|----------|-----|----------------|
+|   Ibinmbiju   | Ibin Mathew Biju  | 3770662 |
+|   AnuR1234  | Anu Reddy | 3768482  |
+|   nokitoino   | Burhan Akin Yilmaz | 4114082    |
+|   nr59684   | Nilesh Parshotam Rijhwani | 3771253    |
+
 # Medical QA system chatbot (NLP with Transformer Project)
 
 Introduction:
