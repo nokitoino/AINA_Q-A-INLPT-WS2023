@@ -59,6 +59,11 @@ Teamates contribution(as of now):
    - Defined a chunk size of 1000 to start working on the experimental phase where the inout json from the webscrapping (papers.json) is brokendown in to defined chunksize and stored as json which later will be used in ambedding.py as an input to our ambedding function
    - Working on embedding model and function, current decision - 'text_davinci_003' which is gonna be deprectaed in jan 2024, next model --> gpt-3.5-turbo-1106
       - Implemented the Embedding model for PubMed Documents using OpenAI's GPT-3 API.
+4. Ibin Mathew Biju:
+   - Experimented with different embedding models such as openAI and compared its performance.
+   - Researched and worked on different vector stores such as FAISS, chromaDB, pinecone to figure out the best suitable vector store for the architecture.
+   - Implemented FAISS vector store and integrated with the current embedding files and did vector search.
+   - Currently working on different LLMs and experimenting different combinations for better results.
 ## Requirements
 
 ### Software Dependencies
