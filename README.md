@@ -51,7 +51,11 @@ Teamates contribution(as of now):
    - Looking to different evaluating metrics 
 2. Akin Yilmaz:
    - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
-   - Testing a parallel Pipeline using Haystack for the entire workflow. So far implemented the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever.
+   - Testing a parallel Pipeline using Haystack for the entire workflow. Implemented simple pipeline using the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever, and T5 as LLM, aborted the continuation due to the group agreement to stick to LangChain.
+   - Implemented and commented embedding_evaluation.py
+   - Only Commented and uploaded Embedding-OpenAI-Chroma.ipynb, which was implemented by Anu Reddy.
+   - Implemented LLM-GPT3.5-Turbo.ipynb, which is the continuation of our base Notebook Embedding-OpenAI-Chroma.ipynb. It uses GPT3.5 Turbo as LLM.
+   - Implemented Evaluation-Contextual-Compression.ipynb based on the ideas used in the lectures last assignment. Uses LLMExtractor, and different metrics to evaluate the performance of our entire pipeline with the help of Hugging Face pubmed_qa dataset.
 3. Nilesh Rijhwani:
    - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping:
       - Using Python scheduler library - APScheduler
