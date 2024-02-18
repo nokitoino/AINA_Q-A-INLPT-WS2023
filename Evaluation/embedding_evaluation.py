@@ -11,13 +11,11 @@ It will generate on {num_documents} exactly {amount} of questions using OpenAIs 
 Please make sure to have balance on your account.
 
 Hint:
-
 There is alot of playground on how to form the prompt. We choose a type of question, give the context, and ask OpenAI to form questions of this type.
 We expect the response to be in JSON format, but we cannot gurantee it. Therefore, we need some error-handling, in case of bade parsing.
 One can extend the types of questions, or even modify this code to ask a commong question over multiple documents.
 
 Problems:
-
 Some questions are general, not context-specific like "Whats the purpose of this study?".
 Despite these "bad" questions, we will choose the best performing embedding system.
 One could also force ChatGPT in the prompt, to be more context-specific while maintaining the questions short and simple.
