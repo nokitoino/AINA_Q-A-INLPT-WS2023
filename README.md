@@ -29,7 +29,7 @@ Phase 1: Data Retrival
 Step 1: Webscrape the content (title, abstract,authors,references) from PubMed website (https://pubmed.ncbi.nlm.nih.gov/?term=intelligence+%5BTitle%2Fabstract%5D&filter=simsearch1.fha&filter=years.2014-2024&sort=date) from 2014-2024 and store it in JSON format.
 Step 2: There are 2 options:
 1st option : The bulk upload of the json file into Elasticsearch performing customized mappings performing semantic search and providing the relevant documents along with similarity score 
-2nd option : Perform chunking using (fill it up)
+2nd option : Perform chunking using Langchain RecursivecharacterTextSplitter to perform chunking of 1000 with 200 overlap.(used this option in the project)
 Step 3: Using the OpenAI embedding API, embed the content and store it in the vector store.
 Phase 2: Generation phase 
 Step 1: when the user posts a question on UI (steamlit), it is converted into an embedded API 
@@ -48,6 +48,7 @@ Teamates contribution(as of now):
    - Experimented with different Embeddings models (openAI,BGE embeddings) and the comparison report has been shared(https://docs.google.com/document/d/1oVKGwl1XahiJP7jK8ojgg4UXNGZ2AUEMDeUFgmyyIZQ/edit?usp=sharing)
    - Worked with Hybrid search (Ensemble Retriver = BM25 retriever+Faiss retriever) (implementation will be uploaded soon)
    - Experimented with usage of different LLMs (openAI,Huggingfacehub(HuggingFaceH4/zephyr-7b-beta) and bloke model Medalpeca(medical LLM) to generate the context (implementation will be uploaded soon)
+   - Working on implementation of Hybrid Search
    - Looking to different evaluating metrics 
 2. Akin Yilmaz:
    - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
