@@ -58,12 +58,15 @@ Teamates contribution(as of now):
    - Implemented LLM-GPT3.5-Turbo.ipynb, which is the continuation of our base Notebook Embedding-OpenAI-Chroma.ipynb. It uses GPT3.5 Turbo as LLM.
    - Implemented Evaluation-Contextual-Compression.ipynb based on the ideas used in the lectures last assignment. Uses LLMExtractor, and different metrics to evaluate the performance of our entire pipeline with the help of Hugging Face pubmed_qa dataset.
 3. Nilesh Rijhwani:
-   - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping:
+   - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping (Droped due to time constraint):
       - Using Python scheduler library - APScheduler
       - Also storing the last scrapped date in a text file amd using functions to access and update the same before putting it in query.
    - Defined a chunk size of 1000 to start working on the experimental phase where the inout json from the webscrapping (papers.json) is brokendown in to defined chunksize and stored as json which later will be used in ambedding.py as an input to our ambedding function
-   - Working on embedding model and function, current decision - 'text_davinci_003' which is gonna be deprectaed in jan 2024, next model --> gpt-3.5-turbo-1106
+   - Worked on embedding model and function, current decision - 'text_davinci_003' which is gonna be deprectaed in jan 2024, next model --> gpt-3.5-turbo-1106
       - Implemented the Embedding model for PubMed Documents using OpenAI's GPT-3 API.
+   - Worked on the pubmedbert LLM for generating the response
+   - Performed evaluation of LLMs based on BERT, BLEU and Rogue Score as primary metrics
+   - Worked on follow-up questions generation using openai based on compressed context(Developed by Akin)
 4. Ibin Mathew Biju:
    - Experimented with different embedding models such as openAI and compared its performance.
    - Researched and worked on different vector stores such as FAISS, chromaDB, pinecone to figure out the best suitable vector store for the architecture.
