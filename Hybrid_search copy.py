@@ -11,7 +11,7 @@ class HybridSearch:
     def __init__(self, data_path, faiss_index_path):
         self.data_path = data_path
         self.faiss_index_path = faiss_index_path
-        os.environ['OPENAI_API_KEY'] = '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'
+        os.environ['OPENAI_API_KEY'] = '<openai api key>'
         self.embedding = OpenAIEmbeddings()
         self.ensemble_retriever = None
 
@@ -83,8 +83,8 @@ class HybridSearch:
         return formatted_results 
 
 if __name__ == "__main__":
-    hs = HybridSearch('E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\data\\papers_latest.json', 
-                      'E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\db\\faiss_index')
+    hs = HybridSearch('<path to papers.json>', 
+                      '<path to faiss index>')
     data = hs.load_data()
     docs = hs.transform_data_to_documents(data)
     print(f"First item type before passing to BM25: {type(docs[0])}")
@@ -93,7 +93,7 @@ if __name__ == "__main__":
     faiss_vectorstore = hs.process_documents_with_faiss(docs)
     hs.create_ensemble_retriever(bm25_retriever, faiss_vectorstore)
 
-    query = 'what is facebook?'
+    query = 'Why did the researchers develop text classifiers for detecting invasive fungal diseases from free-text radiology reports?'
     ensemble_results = hs.get_relevant_documents(query)  # This will now receive a list
     for result in ensemble_results:
         print(result)

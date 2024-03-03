@@ -13,9 +13,9 @@ from dotenv import load_dotenv
 import os
 load_dotenv() 
 
-data_path = '/Users/anureddy/Desktop/SEM03/Natural_Language_Processing_with_Transformers/Project_QA/QA_PROJ/data/papers_latest.json'
+data_path = 'E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\data\\papers_latest.json'
 openai_api_key = os.environ.get("OPENAI_API_KEY")
-faiss_db_path = '/Users/anureddy/Desktop/SEM03/Natural_Language_Processing_with_Transformers/Project_QA/_Q-A-INLPT-WS2023/DB/faiss_index'
+faiss_db_path = 'E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\db\\faiss_index'
 
 # Initialize HybridSearchSetup
 hybrid_search_setup = HybridSearch(data_path, faiss_db_path)
@@ -109,8 +109,8 @@ def method_4_medalpaca(question, model_dir):
     model_id = "medalpaca/medalpaca-7b"
     
     # Define paths for the model and tokenizer
-    model_file_path = '/Users/anureddy/Desktop/SEM03/Natural_Language_Processing_with_Transformers/Project_QA/_Q-A-INLPT-WS2023/DB/Medalpeca/medalpaca_model'
-    tokenizer_file_path = '/Users/anureddy/Desktop/SEM03/Natural_Language_Processing_with_Transformers/Project_QA/_Q-A-INLPT-WS2023/DB/Medalpeca/medalpaca_tokenizer'
+    model_file_path = 'E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\data\Medalpeca\\medalpaca_model'
+    tokenizer_file_path = 'E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\data\Medalpeca\\medalpaca_tokenizer'
 
     # Check if the model and tokenizer are already downloaded
     if not os.path.exists(model_file_path) or not os.path.exists(tokenizer_file_path):
@@ -141,10 +141,10 @@ def method_4_medalpaca(question, model_dir):
 
 # Example usage
 if __name__ == "__main__":
-    model_dir = "/Users/anureddy/Desktop/SEM03/Natural_Language_Processing_with_Transformers/Project_QA/_Q-A-INLPT-WS2023/Medalpeca"
+    model_dir = "E:\\NLPT\\_Q-A-INLPT-WS2023\\Transfromer_project-20240228T221604Z-002\\Transfromer_project\\data\Medalpeca\\Medalpeca"
     os.makedirs(model_dir, exist_ok=True)
     question = "What are the benefits of using biopolymer-based films in food packaging?"
     #method_1_pubmed_bert(question)
-    #method_2_openai_llm(question)
+    method_2_openai_llm(question)
     #method_3_huggingface_hub(question)
-    method_4_medalpaca(question,model_dir)
+    #method_4_medalpaca(question,model_dir)
