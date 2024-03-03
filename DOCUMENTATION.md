@@ -10,3 +10,29 @@
 - [License](#license)
 
 ## Members Contribution
+
+
+## RAG Pipeline
+### Pipeline
+### Data Collection
+### Dense Retriever and Document Store
+### Sparse Retriever
+### Hybrid Search
+### Contextual Compression
+### Frontend
+
+## Experimental Setup
+### Choosing the QA-Framework
+### Data Collection with Entrez
+### Hybrid Search with OpenAI Embedding
+### Contextual Compression with LLMExtractor
+### Frontend with Streamlit
+
+## Evaluation
+### Evaluating Embeddings
+### Evaluating LLMs
+### Evaluation of Contextual Compression
+### Risk Analysis
+### Conclusion
+
+## Medical QA-system Demo
