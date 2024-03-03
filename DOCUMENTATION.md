@@ -5,7 +5,7 @@
 - [Experimental Setup](#experimental-setup)
 - [Hardware Requirements](#hardware-requirements)
 - [Evaluation](#evaluation)
-- [Medical QA-system Demo](#demo)
+- [Medical QA-system Demo](#medical-qa-system-demo)
 - [Resources](#resources)
 - [License](#license)
 
