@@ -77,7 +77,7 @@ The [Follow-up Questions](Follow-up-Questions/) folder contains the implementati
 |   Generate_followup_ques_chroma.ipynb  | Generates follow up questions | Chroma database, papers.json |
 
 
-The [Images](Images/) folder contains snapshots of our demo.
+The [images](images/) folder contains snapshots of our demo.
 
 The [Archieves](Archieves/) folder contains omitted approaches.
 
