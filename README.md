@@ -1,3 +1,7 @@
+
+This project has been developed as part of the "Natural Language Processing with Transformers" lecture, conducted by Professor Gertz.
+
+
 Github UserName Mapping
 
 | UserName     | StudentName | Matrikelnummer     |
@@ -20,6 +24,7 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 ## Table of Contents
 - [High-end Architecture](#high-end-architecture)
 - [Documentation](#documentation)
+- [Contribution](#contribution)
 - [File Overview](#file-overview)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -56,11 +61,7 @@ The documentations can be found in [DOCUMENTATION.md](DOCUMENTATION.md), which c
 - [Medical QA-system Demo](DOCUMENTATION.md)
 - [Resources](DOCUMENTATION.md)
 
-  
-Copyright (c) 2023.
-
-This code has been developed as part of the "NLP with Transformer Project" project.
-
+## Contribution
 Teamates contribution(as of now):
 1. Anu Reddy:
    - Performed data analysis on the documents from pubmed url link.
