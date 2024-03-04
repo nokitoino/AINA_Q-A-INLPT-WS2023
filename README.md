@@ -30,7 +30,8 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 - [License](#license)
   
 ## High-end architecture:
-![Unbenanntes_Diagramm drawio](https://github.com/nokitoino/_Q-A-INLPT-WS2023/assets/18616498/74372a75-16e1-4c3c-b87d-c176e97225ba)
+![Unbenanntes Diagramm drawio(1)](https://github.com/nokitoino/AINA_Q-A-INLPT-WS2023/assets/18616498/57ca4147-a87a-41e8-9002-b20e687cd09b)
+
 
 
 ## Documentation
