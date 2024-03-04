@@ -2,22 +2,33 @@
 
 NLP Project Group 20
 
-| Github-UserName     | StudentName | Matrikelnummer     |
-|----------|-----|----------------|
-|   Ibinmbiju   | Ibin Mathew Biju  | 3770662 |
-|   AnuR1234  | Anu Reddy | 3768482  |
-|   nokitoino   | Burhan Akin Yilmaz | 4114082    |
-|   nr59684   | Nilesh Parshotam Rijhwani | 3771253    |
+| Github-UserName     | StudentName | Matrikelnummer     | Course | Email-address |
+|----------|-----|----------------|-----|----------------|
+|   Ibinmbiju   | Ibin Mathew Biju  | 3770662 | Msc. Data and Computer Science |  mathew.biju@stud.uni-heidelberg.de |
+|   AnuR1234  | Anu Reddy | 3768482  | Msc. Data and Computer Science |  anu.reddy@stud.uni-heidelberg.de |
+|   nokitoino   | Burhan Akin Yilmaz | 4114082 | Msc. Data and Computer Science |  burhan.yilmaz@stud.uni-heidelberg.de |
+|   nr59684   | Nilesh Parshotam Rijhwani | 3771253 | Msc. Data and Computer Science |  nilesh.rijhwani@stud.uni-heidelberg.de |
+
+## Project Advisory:
+prof. Michael Gertz, Jayson Salazar Rodríguez
+
+## Anti - Plagiarism Confirmation:
+We hereby certify that we have written the work ourselves and that we have not used any sources or aids other than those specified and that we have marked what has been taken over from other people's works, either verbatim or in terms of content, as foreign
+
+04.03.2024, Heidelberg
+Date & Place
+
 
 ## Table of Contents
 1. [Introduction](#1-introduction)
 2. [Members Contribution](#2-members-contribution)
-3. [RAG Pipeline](#3-rag-pipeline)
-4. [Experimental Setup](#4-experimental-setup)
-5. [Evaluation](#5-evaluation)
-6. [Medical QA-system Demo](#6-medical-qa-system-demo)
-7. [Resources](#7-resources)
-8. [License](#8-license)
+3. [Related Work](#3-related-work)
+4. [RAG Pipeline](#4-rag-pipeline)
+5. [Experimental Setup](#5-experimental-setup)
+6. [Evaluation](#6-evaluation)
+7. [Medical QA-system Demo](#7-medical-qa-system-demo)
+8. [References ](#8-references)
+9. [License](#9-license)
 
 ## 1. Introduction
 
@@ -45,12 +56,15 @@ In summary, our project represents a concerted effort to harness the power of na
    - Working on implementation of Hybrid Search
    - Looking to different evaluating metrics 
 2. Akin Yilmaz:
-   - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
-   - Testing a parallel Pipeline using Haystack for the entire workflow. Implemented simple pipeline using the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever, and T5 as LLM, aborted the continuation due to the group agreement to stick to LangChain.
-   - Implemented and commented embedding_evaluation.py
-   - Only Commented and uploaded Embedding-OpenAI-Chroma.ipynb, which was implemented by Anu Reddy.
-   - Implemented LLM-GPT3.5-Turbo.ipynb, which is the continuation of our base Notebook Embedding-OpenAI-Chroma.ipynb. It uses GPT3.5 Turbo as LLM.
-   - Implemented Evaluation-Contextual-Compression.ipynb based on the ideas used in the lectures last assignment. Uses LLMExtractor, and different metrics to evaluate the performance of our entire pipeline with the help of Hugging Face pubmed_qa dataset.
+  - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
+  - Testing a parallel Pipeline using Haystack for the entire workflow. Implemented simple pipeline using the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever, and T5 as LLM, aborted the continuation due to the group agreement to stick to LangChain.
+  - Implemented and commented embedding_evaluation.py
+    Only Commented and uploaded Embedding-OpenAI-Chroma.ipynb, which was implemented by Anu Reddy.
+    Implemented LLM-GPT3.5-Turbo.ipynb, which is the continuation of our base Notebook Embedding-OpenAI-Chroma.ipynb. It uses GPT3.5 Turbo as LLM.
+  - Implemented Evaluation-Contextual-Compression.ipynb based on the ideas used in the lectures last assignment. Uses LLMExtractor, and different metrics to evaluate the performance of our entire pipeline with the help of Hugging Face pubmed_qa dataset.
+  - Implemented Hybrid-Search-Contextual-Compression.ipynb with the hybrid search from Anu.
+  - Implemented qa_generator.py as an alternative to our PubMed QA dataset to automatically generate questions over our documents from papers.json. Can also be used for follow up questions (& embedding evaluation & LLM evaluation.)
+  - Contributed to report with Nilesh and Anu, redesigned architecture diagram, contributed to README.md
 3. Nilesh Rijhwani:
    - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping (Droped due to time constraint):
       - Using Python scheduler library - APScheduler
@@ -71,8 +85,30 @@ In summary, our project represents a concerted effort to harness the power of na
    - Developed and Refactored and fine tuned the code for front end
    - Integrated and deployed the model and Designed the UI.
 
-## 3. RAG Pipeline
-### 3.1 Pipeline
+You can find the Biweekly meetings file maintained in this [link](https://docs.google.com/document/d/1QVJU6Ydzll8Ti5E3zLaVGE1o2qV8WCrpznPQH4D4ZOw/edit)
+
+## 3. Related Work
+
+Our project builds upon significant advancements in question-answering systems, information retrieval techniques, and the application of large language models (LLMs) within the medical domain.
+
+Information Retrieval and Ranking
+
+The foundation of our retrieval system draws from the well-established BM25 algorithm, a probabilistic relevance framework for keyword-based search [1]. To leverage semantic understanding,  we incorporate dense vector embeddings. Recent studies have demonstrated the effectiveness of training biomedical word embeddings for enhanced performance in medical NLP tasks [4].
+
+Hybrid Search Strategies
+
+Recognizing the strengths of both keyword-based and semantic retrieval, our approach adopts a hybrid search model.  This strategy aligns with research highlighting the potential of combining sparse and dense retrievers to improve overall system results.
+
+Language Models and Contextualization
+
+The use of Retrieval-Augmented Generation (RAG) techniques enables our system to tap into the power of LLMs for answer generation while maintaining source transparency. Leveraging tools like the LangChain Extractor [2] is key for effective contextual compression within our QA pipeline. Research on the potential and capabilities of ChatGPT and similar Open-AI models underscores their value in NLP applications [3].
+
+Medical Question-Answering Systems
+
+While our system focuses on the PubMed corpus, there's extensive research on domain-specific QA systems in the medical field.  Our work aims to contribute to this expanding area by exploring the integration of hybrid search and RAG techniques in this specific context.
+
+## 4. RAG Pipeline
+### 4.1 Pipeline
 
 ![RAG Pipeline](./images/RAG_Pipeline.png)
 
@@ -81,7 +117,7 @@ Fig. 1. RAG Pipeline
 
 The pipeline consists of four components. In the following we will describe every components functionality and interactions in detail. In [section 4](#4-experimental-setup) we will describe the specific setting we use, i.e. used framework and libraries.
 
-### 3.2 Data Collection
+### 4.2 Data Collection
 
 The first component of our pipeline collects the medical documents. We want the QA system to derive the answers from the relevant abstracts of the medical documents. To be able filter out the relevant
 documents we will only collect information about the title, abstract and keywords of each document.
@@ -89,7 +125,7 @@ We do not include information about the author, the document publication ids, re
 these entries do not contain any valuable information to genearate an answer for a medical question.
 Being restricted to these entries also reduces the size of our document store, which we will discuss now.
 
-### 3.3 Dense Retriever and Document Store
+### 4.3 Dense Retriever and Document Store
 
 The realm of Retrieval-Augmented Generation (RAG) involves a process: it transforms text into high-
 dimensional vectors–embeddings–that capture semantic and contextual nuances. These dynamic entities,
@@ -110,7 +146,7 @@ our pipeline, we do not restrict ourselves to dense embeddings only, but rather 
 and dense embeddings as seen in the diagram XY. The justification for this can be found in subsection
 XY 6.
 
-### 3.4 Sparse Retriever
+### 4.4 Sparse Retriever
 
 A search based on keywords, also known as sparse vector search, relies on creating sparse ”embeddings”.
 Most values in the vector are 0, except for a few non-zero values. Algorithms like BM25 are used to
@@ -121,11 +157,10 @@ query is converted into a sparse embedding using the same algorithm.Cosine simil
 are used to compare the query embedding with each document’s embedding. Documents are ranked
 based on their similarity scores. The most relevant documents are displayed first in the search results.
 
-### 3.5 Hybrid Search
+### 4.5 Hybrid Search
 
 As mentioned we do not restrict ourselves to a dense retriever, but rather to a combination of dense
-and sparse retrievers. This concept is called hybrid search. The justification to use hybrid search can
-be found in section XY.
+and sparse retrievers. This concept is called hybrid search.
 
 The hybrid search combines keyword-based and vector search strategies to leverage their respective
 strengths. By incorporating vector search independently, it positively impacts the retrieval process. Hy-
@@ -140,7 +175,7 @@ In the diagram we notice two databases, one contains the sparse embeddings, the 
 embeddings, both of which are used to retrieve relevant documents for the users question via hybrid
 search.
 
-### 3.6 Contextual Compression
+### 4.6 Contextual Compression
 
 Now after retrieving the relevant documents for the users medical question, we will do contextual com-
 pression. As the name suggests, we Contextual compression, a fundamental aspect of natural language
@@ -151,13 +186,13 @@ This component of our RAG will summarize the retrieved context to its core state
 as context for the LLM. This reduces the amount of tokens in the input for the LLM while maintaining
 enough context information for the LLM to generate an answer for the question.
 
-### 3.7 Frontend
+### 4.7 Frontend
 
 To ensure ease of use, our pipeline incorporates a user-friendly frontend built with the Python-based Streamlit framework. This provides a simple web interface for users to submit their medical questions and receive the system's responses. For seamless accessibility and deployment, the frontend is hosted on Hugging Face Spaces, a well-known platform within the AI/ML community. Our focus on Streamlit and Hugging Face Spaces aims to provide a smooth and intuitive user experience when interacting with our medical question-answering system.
 
-## 4. Experimental Setup
+## 5. Experimental Setup
 
-### 4.1 Choosing the QA-Framework
+### 5.1 Choosing the QA-Framework
 There are three well-known frameworks that help to build the entire QA pipeline. We choose LangChain,
 since it is well documented, has a good performance, has efficient methods for indexing and retrieval,
 and its dynamics with respect to any component of the pipeline.
@@ -170,7 +205,7 @@ and its dynamics with respect to any component of the pipeline.
 
 Table 1: Comparison of LlamaIndex, LangChain, and Haystack
 
-### 4.2 Data Collection with Entrez
+### 5.2 Data Collection with Entrez
 
 The first necessary step to build our QA system is to collect the abstracts of our medical documents from
 Pub Med. The abstracts contain valuable information for the entire document, and often are sufficient
@@ -212,7 +247,7 @@ a json file papers.json with the following format:
 ```
 In the Github Repository one can find the implementation in PubMedScraper.py.
 
-### 4.3 Hybrid Search with OpenAI Embedding
+### 5.3 Hybrid Search with OpenAI Embedding
 
 To implement the aforementioned hybrid search, we have considered the following embedding models
 for the dense retriever part:
@@ -221,19 +256,19 @@ for the dense retriever part:
 - pubmedbert (HuggingFace)[pubmedbert]
 
 We choose OpenAI Embedding as our embedding model, based on the evaluation tests performed which
-have been discussed in detail in the section XY. To store the dense embeddings we use Chroma as our
+have been discussed in detail in the section [6](#6-evaluation). To store the dense embeddings we use Chroma as our
 vector database.
 
 For the sparse retriever part, we choose BM25, which is an improved version of the TF-IDF (Term-
 Frequency-Inverse-Document-Frequency). We refer to the Evaluation section that justifies this specific
 setting.
 
-### 4.4 Contextual Compression with LLMExtractor
+### 5.4 Contextual Compression with LLMExtractor
 
 LangChain provides the LLMChainExtractor to easily implement contextual compression in our pipeline,
-see In section XY we compare the RAG without contextual compression against the RAG with contextual compression.
+see In section [6](#6-evaluation) we compare the RAG without contextual compression against the RAG with contextual compression.
 
-### 4.5 Frontend with Streamlit
+### 5.5 Frontend with Streamlit
 
 - Rapid Prototyping & Ease of Use: Streamlit enables swift creation of a functional interface for experimentation, allowing us to focus on the core RAG functionality.
 - Dynamic Updates: Streamlit's reactive programming model updates the interface in response to queries, providing immediate feedback on the system's behavior under different conditions.
@@ -244,8 +279,8 @@ see In section XY we compare the RAG without contextual compression against the 
 - Output Display: The interface presents the generated answer, relevant context, and related documents.
 - Follow-up Generation: The system suggests follow-up questions to promote further exploration and test conversational aspects of the setup.
 
-## 5. Evaluation
-### 5.1 Evaluating Embeddings
+## 6. Evaluation
+### 6.1 Evaluating Embeddings
 
 We have implemented embedding evaluation.py, which traverses a random subset of the collected
 document abstracts and prompts ChatGPT to generate a couple of questions specific to the abstracts
@@ -297,7 +332,7 @@ Table 2: The Evaluation Metrics of Embeddings Models
 Based on both techniques, we conclude that OpenAI is performing much better in terms of retrieving
 the correct documents as expected. Hence we used OpenAI as our embedding model.
 
-### 5.2 Evaluating LLMs
+### 6.2 Evaluating LLMs
 To evaluate the LLMs we make uses of the Hugging Face Pub Med Dataset qiaojin/pubmed qa. The
 relevant columns of this dataset is question, context and long answer. The idea is to use metrics that
 express the similarity between the RAG generated answer and the desired target answer from the Pub
@@ -326,7 +361,7 @@ metrics: BLEU, ROUGE, and BERTScore.
 
 Table 3: The Evaluation Metrics of LLMs
 
-### 5.3 Evaluation of Contextual Compression
+### 6.3 Evaluation of Contextual Compression
 Building upon the previous section, we maintain GPT-3.5 Turbo as the LLM in our architecture. Our
 next objective is to assess whether contextual compression enhances the performance of our system.
 Contextual compression is designed to selectively extract pertinent information from documents, thereby
@@ -349,7 +384,7 @@ the similarity between the answers of each RAG against the target answer from th
 
 Table 4: The Evaluation Metrics of LLM before and after context compression
 
-### 5.4 Risk Analysis
+### 6.4 Risk Analysis
 
 Regarding the evaluations done so far, we decide to go with the OpenAI Embedding and the GPT3.5
 Turbo as LLM. Not only do these perform better than other embedding models and LLM models,
@@ -363,7 +398,7 @@ probability for a downfall of our service is mathematically expressed Pr[Local O
 Outage], which is obviously larger than Pr[Local Outage]. If the damage caused by this availability is
 high, than one should rethink about using models that can be downloaded, and therefore hosted locally.
 
-### 5.5 Conclusion
+### 6.5 Conclusion
 
 We are convinced to use LangChain as framework due to the detailed documentation, performance and
 dynamics. With respect to our evaluation, we have come to the conclusion that we will stick to OpenAI
@@ -371,7 +406,17 @@ Embedding and the GPT3.5 Turbo as LLM for our RAG, and we have seen that context
 improves the models accuracy while reducing the input size for the Online LLM model, and therefore
 reducing the service costs.
 
-## 6 Medical QA-system Demo
+### 6.6 Future Work
+
+Specialized Medical Vocabulary: Integrating a comprehensive vocabulary of medical terms has the potential to significantly enhance the system's understanding of nuanced medical queries. This could be achieved by incorporating established medical ontologies or knowledge bases into the system.
+
+Complex Question Handling:  Extend the system's capabilities to handle more complex question types, such as those involving hypothetical scenarios, comparisons, or requiring reasoning over multiple documents.
+
+Answer Validation and Explainability: Develop techniques for verifying answer accuracy, particularly regarding critical medical information.  Incorporate methods to explain the system's reasoning process, fostering trust between healthcare professionals and the QA system.
+
+User Interface Refinement: Continuously improve the frontend's design and functionality based on feedback from healthcare professionals, ensuring the system is intuitive and efficient to use within clinical or research settings.
+
+## 7 Medical QA-system Demo
 
 Finally, we show some illustrations of our final product developed by Akin Yilmaz, Anu Reddy, Ibin
 Biju, and Nilesh Rijhwani (AAIN).
@@ -388,7 +433,7 @@ The model is live on hugging face and can be found at link [Your PubMed Bot!](ht
 
 Before acessing the model, make sure you have joined the organization at the link [Join group here!](https://huggingface.co/organizations/inltp-group20/share/sTBJmwoxoUamGbTXfJnIeqAEtsyqAggWgg)
 
-## 7 Resources
+## 8 References
 
 [1]. Robertson, Stephen, et al. ‘The Probabilistic Relevance Framework: BM25 and Beyond’. Foundations and Trends® in Information Retrieval, vol. 3, no. 4, Now Publishers, Inc., 2009, pp. 333–389.
 
@@ -398,6 +443,6 @@ Before acessing the model, make sure you have joined the organization at the lin
 
 [4] Chiu, Billy, et al. ‘How to Train Good Word Embeddings for Biomedical NLP’. Proceedings of the 15th Workshop on Biomedical Natural Language Processing, 2016, pp. 166–174.
 
-## 8 License
+## 9 License
 
 This project is licensed under the [GNU General Public License (GPL) version 3](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
