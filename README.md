@@ -105,16 +105,22 @@ The [Scraper](LangChainRAG/) folder contains the document scraper, which is impo
 
 | File     |  Functionality | Requirements
 |----------|-----|----------------|
-|   PubMedScraper.py  | Creates papers.json   | None
+|   PubMedScraper.py  | Creates papers.json   | None |
 
 The [LangChain RAG](LangChainRAG/) folder contains base Jupyter Notebooks that our final app is based on. It contains the embedding, vector storage, LLM, Contextual Compression.
 
 | File     |  Functionality | Requirements
 |----------|-----|----------------|
-|   Embedding-OpenAI-Chroma.ipynb   | Creates OpenAI Chroma vector database ~ several hours to execute, 5 GB size. Alternatively, download here: [Download Chroma database](https://www.dropbox.com/scl/fi/237x8upy01vy8v6kw7h9i/Chroma.zip?rlkey=0dga7zqksbz22pwq1sqzkj02f&dl=0) | None
+|   Embedding-OpenAI-Chroma.ipynb   | Creates OpenAI Chroma vector database ~ several hours to execute, 5 GB size. Alternatively, download here: [Download Chroma database](https://www.dropbox.com/scl/fi/237x8upy01vy8v6kw7h9i/Chroma.zip?rlkey=0dga7zqksbz22pwq1sqzkj02f&dl=0) | None |
 |   Hybrid-Search-Contextual-Compression.ipynb   |Takes question, retrieves relevant docs with hybrid search, does contextual compression, generates answer with LLM | Chroma database & papers.json |
 |   LLM-GPT3.5-Turbo.ipynb   | Uses only Chroma database and invokes LLM on question|  Chroma database & papers.json |
 
+The [Evaluation](Evaluation/) folder contains scripts to assists/do the evaluation of embeddings, LLMs, and contextual compressions.
+| File     |  Functionality | Requirements
+|----------|-----|----------------|
+|   Evaluate_embeddings_HIT_MRR.ipynb  |    | None |
+|   Evaluation-Contextual-Compression.ipynb  | Evaluates contextual compression impact | Chroma database & papers.json & (QA dataset, we use PubMed QA dataset) |
+|    qa_generator.py   | Generates automatically questions for each document in papers.json |  papers.json |
 
 ## Installation of our final QA-system
 
