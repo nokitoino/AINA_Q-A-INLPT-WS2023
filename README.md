@@ -63,6 +63,9 @@ Teamates contribution(as of now):
    - Only Commented and uploaded Embedding-OpenAI-Chroma.ipynb, which was implemented by Anu Reddy.
    - Implemented LLM-GPT3.5-Turbo.ipynb, which is the continuation of our base Notebook Embedding-OpenAI-Chroma.ipynb. It uses GPT3.5 Turbo as LLM.
    - Implemented Evaluation-Contextual-Compression.ipynb based on the ideas used in the lectures last assignment. Uses LLMExtractor, and different metrics to evaluate the performance of our entire pipeline with the help of Hugging Face pubmed_qa dataset.
+   - Implemented Hybrid-Search-Contextual-Compression.ipynb with the hybrid search from Anu.
+   - Implemented qa_generator.py as an alternative to our PubMed QA dataset to automatically generate questions over our documents from papers.json. Can also be used for follow up questions (& embedding evaluation & LLM evaluation.)
+   - Contributed to report with Nilesh and Anu, redesigned architecture diagram, contributed to README.md.
 3. Nilesh Rijhwani:
    - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping (Droped due to time constraint):
       - Using Python scheduler library - APScheduler
