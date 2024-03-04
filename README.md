@@ -48,13 +48,13 @@ Step 3:These documents will be sent in context to the LLM (Medapeca) along with 
 ## Documentation
 
 The documentations can be found in [DOCUMENTATION.md](DOCUMENTATION.md), which contains the following content table.
-- [Members Contribution]()
-- [RAG Pipeline]()
-- [Experimental Setup]()
-- [Hardware Requirements]()
-- [Evaluation]()
-- [Medical QA-system Demo]()
-- [Resources]()
+- [Members Contribution](DOCUMENTATION.md)
+- [RAG Pipeline](DOCUMENTATION.md)
+- [Experimental Setup](DOCUMENTATION.md)
+- [Hardware Requirements](DOCUMENTATION.md)
+- [Evaluation](DOCUMENTATION.md)
+- [Medical QA-system Demo](DOCUMENTATION.md)
+- [Resources](DOCUMENTATION.md)
 
   
 Copyright (c) 2023.
