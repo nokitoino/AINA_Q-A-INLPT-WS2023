@@ -45,47 +45,6 @@ The documentations can be found in [DOCUMENTATION.md](DOCUMENTATION.md), which c
 - [Medical QA-system Demo](DOCUMENTATION.md)
 - [Resources](DOCUMENTATION.md)
 
-## Contribution
-Teamates contribution(as of now):
-1. Anu Reddy:
-   - Performed data analysis on the documents from pubmed url link.
-   - Performed data retrieval on the combined documents in ndjson format (provided by akin) via writing queries in elastic search in Python( and cross-verified in kibana) and optimized the queries to retrieve the documents using both keyword and vector search on the textual components of the dataset(title and abstract).
-   - Performed some test queries by providing the questions as input and retrieving the corresponding documents along with their cosine similarity scores.
-   - Experimented with different Embeddings models (openAI,BGE embeddings) and the comparison report has been shared(https://docs.google.com/document/d/1oVKGwl1XahiJP7jK8ojgg4UXNGZ2AUEMDeUFgmyyIZQ/edit?usp=sharing)
-   - Worked with Hybrid search (Ensemble Retriver = BM25 retriever+Faiss retriever) (implementation will be uploaded soon)
-   - Experimented with usage of different LLMs (openAI,Huggingfacehub(HuggingFaceH4/zephyr-7b-beta) and bloke model Medalpeca(medical LLM) to generate the context (implementation will be uploaded soon)
-   - Working on implementation of Hybrid Search
-   - Looking to different evaluating metrics 
-2. Akin Yilmaz:
-   - Developed the PudMedScraper.py using Entrez. Bypassed the Ratelimit of 9999 files using date intervalls. Created the JSON format in cooperation with the others.
-   - Testing a parallel Pipeline using Haystack for the entire workflow. Implemented simple pipeline using the DocumentStore using Elasticsearch and experimented with the TF-IDF (sparse) Retriever, and T5 as LLM, aborted the continuation due to the group agreement to stick to LangChain.
-   - Implemented and commented embedding_evaluation.py
-   - Only Commented and uploaded Embedding-OpenAI-Chroma.ipynb, which was implemented by Anu Reddy.
-   - Implemented LLM-GPT3.5-Turbo.ipynb, which is the continuation of our base Notebook Embedding-OpenAI-Chroma.ipynb. It uses GPT3.5 Turbo as LLM.
-   - Implemented Evaluation-Contextual-Compression.ipynb based on the ideas used in the lectures last assignment. Uses LLMExtractor, and different metrics to evaluate the performance of our entire pipeline with the help of Hugging Face pubmed_qa dataset.
-   - Implemented Hybrid-Search-Contextual-Compression.ipynb with the hybrid search from Anu.
-   - Implemented qa_generator.py as an alternative to our PubMed QA dataset to automatically generate questions over our documents from papers.json. Can also be used for follow up questions (& embedding evaluation & LLM evaluation.)
-   - Contributed to report with Nilesh and Anu, redesigned architecture diagram, contributed to README.md.
-3. Nilesh Rijhwani:
-   - Working on the automation of webscrapping where I am using following structure to maintain timely webscarpping (Droped due to time constraint):
-      - Using Python scheduler library - APScheduler
-      - Also storing the last scrapped date in a text file amd using functions to access and update the same before putting it in query.
-   - Defined a chunk size of 1000 to start working on the experimental phase where the inout json from the webscrapping (papers.json) is brokendown in to defined chunksize and stored as json which later will be used in ambedding.py as an input to our ambedding function
-   - Worked on embedding model and function, current decision - 'text_davinci_003' which is gonna be deprectaed in jan 2024, next model --> gpt-3.5-turbo-1106
-      - Implemented the Embedding model for PubMed Documents using OpenAI's GPT-3 API.
-   - Worked on the pubmedbert LLM for generating the response
-   - Performed evaluation of LLMs based on BERT, BLEU and Rogue Score as primary metrics
-   - Worked on follow-up questions generation using openai based on compressed context(Developed by Akin)
-4. Ibin Mathew Biju:
-   - Experimented with different embedding models such as openAI and compared its performance.
-   - Researched and worked on different vector stores such as FAISS, chromaDB, pinecone to figure out the best suitable vector store for the architecture.
-   - Implemented FAISS vector store and integrated with the current embedding files and did vector search.
-   - Worked on different LLMs and experimenting different combinations for better results.
-   - Researched about various front end possibilities and hosting services and finally decided to use streamlit for front end and huggingface spaces for free hosting.
-   - Developed and Refactored and fine tuned the code for front end
-   - Integrated and deployed the model and Designed the UI.
-
-
 ## File Overview, Installation, Usage
 
 The [Scraper](LangChainRAG/) folder contains the document scraper, which is important to execute before using any other scripts from us.
