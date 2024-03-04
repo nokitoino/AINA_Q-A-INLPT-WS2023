@@ -39,7 +39,7 @@ In summary, our project represents a concerted effort to harness the power of na
    - Performed data analysis on the documents from pubmed url link.
    - Performed data retrieval on the combined documents in ndjson format (provided by akin) via writing queries in elastic search in Python( and cross-verified in kibana) and optimized the queries to retrieve the documents using both keyword and vector search on the textual components of the dataset(title and abstract).
    - Performed some test queries by providing the questions as input and retrieving the corresponding documents along with their cosine similarity scores.
-   - Experimented with different Embeddings models (openAI,BGE embeddings) and the comparison report has been shared (https://docs.google.com/document/d/1oVKGwl1XahiJP7jK8ojgg4UXNGZ2AUEMDeUFgmyyIZQ/edit?usp=sharing)
+   - Experimented with different Embeddings models (openAI,BGE embeddings) and the comparison report has been shared [here](https://docs.google.com/document/d/1oVKGwl1XahiJP7jK8ojgg4UXNGZ2AUEMDeUFgmyyIZQ/edit?usp=sharing)
    - Worked with Hybrid search (Ensemble Retriver = BM25 retriever+Faiss retriever) (implementation will be uploaded soon)
    - Experimented with usage of different LLMs (openAI,Huggingfacehub(HuggingFaceH4/zephyr-7b-beta) and bloke model Medalpeca(medical LLM) to generate the context (implementation will be uploaded soon))
    - Working on implementation of Hybrid Search
