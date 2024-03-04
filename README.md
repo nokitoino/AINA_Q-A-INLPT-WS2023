@@ -112,8 +112,8 @@ The [LangChain RAG](LangChainRAG/) folder contains base Jupyter Notebooks that o
 | File     |  Functionality | Requirements
 |----------|-----|----------------|
 |   Embedding-OpenAI-Chroma.ipynb   | Creates OpenAI Chroma vector database ~ several hours to execute, 5 GB size. Alternatively, download here: [Download Chroma database](https://www.dropbox.com/scl/fi/237x8upy01vy8v6kw7h9i/Chroma.zip?rlkey=0dga7zqksbz22pwq1sqzkj02f&dl=0) | None
-|   Hybrid-Search-Contextual-Compression.ipynb   | Chroma database & papers.json |
-|   LLM-GPT3.5-Turbo.ipynb   | Burhan Akin Yilmaz |  Chroma database & papers.json |
+|   Hybrid-Search-Contextual-Compression.ipynb   |Takes question, retrieves relevant docs with hybrid search, does contextual compression, generates answer with LLM | Chroma database & papers.json |
+|   LLM-GPT3.5-Turbo.ipynb   | Uses only Chroma database and invokes LLM on question|  Chroma database & papers.json |
 
 
 ## Installation of our final QA-system
