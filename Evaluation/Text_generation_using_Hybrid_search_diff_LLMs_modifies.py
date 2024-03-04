@@ -4,7 +4,7 @@ from langchain_community.llms import HuggingFacePipeline
 from langchain_openai import OpenAI
 from langchain.chains import RetrievalQA
 from langchain_community.llms import HuggingFaceHub
-from Hybrid_search import HybridSearch
+from Evaluation.Hybrid_search import HybridSearch
 from dotenv import load_dotenv
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate

@@ -8,7 +8,7 @@ from langchain.retrievers.document_compressors import LLMChainExtractor
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-from Hybrid_search import HybridSearch
+from Evaluation.Hybrid_search import HybridSearch
 import warnings
 
 warnings.filterwarnings("ignore")
