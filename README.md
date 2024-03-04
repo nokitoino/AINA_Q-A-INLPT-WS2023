@@ -24,7 +24,7 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 ## Table of Contents
 - [High-end Architecture](#high-end-architecture)
 - [Documentation](#documentation)
-- [File Overview](#file-overview)
+- [File Overview and Usage](#file-overview-and-usage)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -44,7 +44,7 @@ The documentations can be found in [DOCUMENTATION.md](DOCUMENTATION.md), which c
 - [Medical QA-system Demo](DOCUMENTATION.md)
 - [Resources](DOCUMENTATION.md)
 
-## File Overview, Installation, Usage
+## File Overview and Usage
 
 The [Scraper](LangChainRAG/) folder contains the document scraper, which is important to execute before using any other scripts from us.
 
