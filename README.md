@@ -24,7 +24,6 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 ## Table of Contents
 - [High-end Architecture](#high-end-architecture)
 - [Documentation](#documentation)
-- [Contribution](#contribution)
 - [File Overview](#file-overview)
 - [Installation](#installation)
 - [Usage](#usage)
