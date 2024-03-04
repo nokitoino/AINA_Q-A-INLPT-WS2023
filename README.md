@@ -102,7 +102,7 @@ The [LangChain RAG](LangChainRAG/) folder contains base Jupyter Notebooks that o
 The [Evaluation](Evaluation/) folder contains scripts to assists/do the evaluation of embeddings, LLMs, and contextual compressions.
 | File     |  Functionality | Requirements
 |----------|-----|----------------|
-|   Evaluate_embeddings_HIT_MRR.ipynb  |    | None |
+|   Evaluate_embeddings_HIT_MRR.ipynb  | Evaluates multiple embeddings using HIT MMR | None |
 |   Evaluation-Contextual-Compression.ipynb  | Evaluates contextual compression impact | Chroma database & papers.json & (QA dataset, we use PubMed QA dataset) |
 |    qa_generator.py   | Generates automatically questions for each document in papers.json |  papers.json |
 
