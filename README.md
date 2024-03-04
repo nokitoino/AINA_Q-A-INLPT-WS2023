@@ -101,6 +101,20 @@ Teamates contribution(as of now):
 
 ## Installation
 
+  ### Test the model in browser:
+  1. Join the HuggingSpace Organization : [Huggingface Organization](https://huggingface.co/organizations/inltp-group20/share/sTBJmwoxoUamGbTXfJnIeqAEtsyqAggWgg)
+  2. Test the model here : [PubMed Model](https://huggingface.co/spaces/inltp-group20/inltp_group20_pubmed_model) (might take around 3 minutes to generate answers)
+
+  ### Run the app in localhost:
+  1. Clone the repo : git clone https://github.com/nokitoino/_Q-A-INLPT-WS2023.git
+  2. Download the chroma_openai embeddings file (5.8 GB) from here : [chroma_openai](https://www.dropbox.com/scl/fi/237x8upy01vy8v6kw7h9i/Chroma.zip?rlkey=0dga7zqksbz22pwq1sqzkj02f&dl=0)
+  3. Navigate to ```Frontend-Stremlit/Hybrid_search.py```
+  4. Change the path of ```'./chroma_openai'``` to the new path.
+  5. Add the *OPENAI_API_KEY*
+  6. Inside terminal run ```pip install streamlit```
+  7. Run the app by ```streamlit run app.py```   (Give path to the app.py)
+
+
 
 ## License
 
