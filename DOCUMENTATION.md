@@ -10,7 +10,7 @@ NLP Project Group 20
 |   nr59684   | Nilesh Parshotam Rijhwani | 3771253 | Msc. Data and Computer Science |  nilesh.rijhwani@stud.uni-heidelberg.de |
 
 ## Project Advisory:
-prof. Michael Gertz, Jayson Salazar Rodríguez
+Prof. Michael Gertz, Jayson Salazar Rodríguez
 
 ## Anti - Plagiarism Confirmation:
 We hereby certify that we have written the work ourselves and that we have not used any sources or aids other than those specified and that we have marked what has been taken over from other people's works, either verbatim or in terms of content, as foreign
@@ -115,7 +115,7 @@ While our system focuses on the PubMed corpus, there's extensive research on dom
 Fig. 1. RAG Pipeline
 <br>
 
-The pipeline consists of four components. In the following we will describe every components functionality and interactions in detail. In [section 4](#4-experimental-setup) we will describe the specific setting we use, i.e. used framework and libraries.
+The pipeline consists of four components. In the following we will describe every components functionality and interactions in detail. In [section 5](#5-experimental-setup) we will describe the specific setting we use, i.e. used framework and libraries.
 
 ### 4.2 Data Collection
 
