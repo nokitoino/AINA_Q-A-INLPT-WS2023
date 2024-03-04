@@ -376,6 +376,14 @@ reducing the service costs.
 Finally, we show some illustrations of our final product developed by Akin Yilmaz, Anu Reddy, Ibin
 Biju, and Nilesh Rijhwani (AAIN).
 
+The demo with question within the context i.e medical context:
+
+![Demo Image 1](/images/output-2.jpg)
+
+The demo with question outside the context:
+
+![Demo Image 1](/images/output-1.png)
+
 The model is live on hugging face and can be found at link [Your PubMed Bot!](https://huggingface.co/spaces/inltp-group20/inltp_group20_pubmed_model)
 
 Before acessing the model, make sure you have joined the organization at the link [Join group here!](https://huggingface.co/organizations/inltp-group20/share/sTBJmwoxoUamGbTXfJnIeqAEtsyqAggWgg)
