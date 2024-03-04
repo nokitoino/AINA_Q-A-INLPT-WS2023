@@ -24,8 +24,7 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 ## Table of Contents
 - [High-end Architecture](#high-end-architecture)
 - [Documentation](#documentation)
-- [Contribution](#contribution)
-- [File Overview](#file-overview)
+- [File Overview and Requirements](#file-overview-and-Requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -45,7 +44,7 @@ The documentations can be found in [DOCUMENTATION.md](DOCUMENTATION.md), which c
 - [Medical QA-system Demo](DOCUMENTATION.md)
 - [Resources](DOCUMENTATION.md)
 
-## File Overview, Installation, Usage
+## File Overview and Requirements
 
 The [Scraper](LangChainRAG/) folder contains the document scraper, which is important to execute before using any other scripts from us.
 
@@ -67,6 +66,26 @@ The [Evaluation](Evaluation/) folder contains scripts to assists/do the evaluati
 |   Evaluate_embeddings_HIT_MRR.ipynb  | Evaluates multiple embeddings using HIT MMR | PubMed QA dataset |
 |   Evaluation-Contextual-Compression.ipynb  | Evaluates contextual compression impact | Chroma database & papers.json & (QA dataset, we use PubMed QA dataset) |
 |    qa_generator.py   | Generates automatically questions for each document in papers.json |  papers.json |
+
+
+
+The [Follow-up Questions](Follow-up-Questions/) folder contains the implementation to generate follow up questions.
+
+| File     |  Functionality | Requirements
+|----------|-----|----------------|
+|   Generate_followup_ques_chroma.ipynb  | Generates follow up questions | Chroma database, papers.json |
+
+
+The [images](images/) folder contains snapshots of our demo.
+
+The [Archieves](Archieves/) folder contains omitted approaches.
+
+
+The [Frontend-Streamlit](Frontend-Streamlit/) folder contains the user interface and the entire backend.
+
+| File     |  Functionality | Requirements
+|----------|-----|----------------|
+|   app.py  | End-To-End UI | Chroma database, papers.json |
 
 ## Installation of our final QA-system
 
