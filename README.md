@@ -71,7 +71,10 @@ Teamates contribution(as of now):
    - Experimented with different embedding models such as openAI and compared its performance.
    - Researched and worked on different vector stores such as FAISS, chromaDB, pinecone to figure out the best suitable vector store for the architecture.
    - Implemented FAISS vector store and integrated with the current embedding files and did vector search.
-   - Currently working on different LLMs and experimenting different combinations for better results.
+   - Worked on different LLMs and experimenting different combinations for better results.
+   - Researched about various front end possibilities and hosting services and finally decided to use streamlit for front end and huggingface spaces for free hosting.
+   - Developed and Refactored and fine tuned the code for front end
+   - Integrated and deployed the model and Designed the UI.
 ## Requirements
 
 ### Software Dependencies
