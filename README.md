@@ -99,7 +99,24 @@ Teamates contribution(as of now):
    - Integrated and deployed the model and Designed the UI.
 
 
-## Installation
+## File Overview, Installation, Usage
+
+The [Scraper](LangChainRAG/) folder contains the document scraper, which is important to execute before using any other scripts from us.
+
+| File     |  Functionality | Requirements
+|----------|-----|----------------|
+|   PubMedScraper.py  | Creates papers.json   | None
+
+The [LangChain RAG](LangChainRAG/) folder contains base Jupyter Notebooks that our final app is based on. It contains the embedding, vector storage, LLM, Contextual Compression.
+
+| File     |  Functionality | Requirements
+|----------|-----|----------------|
+|   Embedding-OpenAI-Chroma.ipynb   | Creates OpenAI Chroma vector database ~ several hours to execute, 5 GB size. Alternatively, download here: [Download Chroma database](https://www.dropbox.com/scl/fi/237x8upy01vy8v6kw7h9i/Chroma.zip?rlkey=0dga7zqksbz22pwq1sqzkj02f&dl=0) | None
+|   Hybrid-Search-Contextual-Compression.ipynb   | Chroma database & papers.json |
+|   LLM-GPT3.5-Turbo.ipynb   | Burhan Akin Yilmaz |  Chroma database & papers.json |
+
+
+## Installation of our final QA-system
 
   ### Test the model in browser:
   1. Join the HuggingSpace Organization : [Huggingface Organization](https://huggingface.co/organizations/inltp-group20/share/sTBJmwoxoUamGbTXfJnIeqAEtsyqAggWgg)
