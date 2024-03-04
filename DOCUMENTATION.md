@@ -74,11 +74,9 @@ In summary, our project represents a concerted effort to harness the power of na
 ## 3. RAG Pipeline
 ### 3.1 Pipeline
 
-<center>
-
 ![RAG Pipeline](./images/RAG_Pipeline.png)
-</center>
-<center>Fig. 1. RAG Pipeline </center>
+
+Fig. 1. RAG Pipeline
 <br>
 
 The pipeline consists of four components. In the following we will describe every components functionality and interactions in detail. In [section 4](#4-experimental-setup) we will describe the specific setting we use, i.e. used framework and libraries.
@@ -164,18 +162,13 @@ There are three well-known frameworks that help to build the entire QA pipeline.
 since it is well documented, has a good performance, has efficient methods for indexing and retrieval,
 and its dynamics with respect to any component of the pipeline.
 
-<center> Table 1: Comparison of LlamaIndex, LangChain, and Haystack </center>
-
-<center>
-
 | Framework     | Pros | Cons     |
 |----------|-----|----------------|
 |   LlamaIndex   | Focused on Indexing and Retrieval <br> Lightweight Interface <br> List Index Feature  | Requires technical expertise <br> Dependent on external services <br> Potential costs involved <br> Evolving technology landscape |
 |   LangChain  | Comprehensive Framework <br> Tool Integration <br> Access to Multiple LLM Providers | Complexity <br> Performance  |
 |   Haystack   | Simplicity <br> Scalability <br> Community Support <br> Modularity | Limited Features <br> Less Control    |
 
-
-</center>
+Table 1: Comparison of LlamaIndex, LangChain, and Haystack
 
 ### 4.2 Data Collection with Entrez
 
@@ -293,17 +286,13 @@ the reciprocals of these ranks across all the queries. So, if the first relevant
 top result, the reciprocal rank is 1; if it’s second, the reciprocal rank is 1/2, and so on. We
 have implemented the above Evaluate embeddings HIT MRR.ipynb
 
-<center>
-
 Embeddings | Hit Rate | MRR Score
 -----------|----------|----------
 OpenAI     | 1.000    | 0.849433
 bge-large  | 0.986    | 0.588398
 pubmedbert | 0.985    | 0.550596
 
-</center>
-
-<center>Table 2: The Evaluation Metrics of Embeddings Models</center>
+Table 2: The Evaluation Metrics of Embeddings Models
 
 Based on both techniques, we conclude that OpenAI is performing much better in terms of retrieving
 the correct documents as expected. Hence we used OpenAI as our embedding model.
@@ -329,17 +318,13 @@ ground truth answer for each question. To measure each LLMs performance, we comp
 answers from each LLM with the ground truth answers from the Pub Med QA dataset using the specified
 metrics: BLEU, ROUGE, and BERTScore.
 
-<center>
-
 | LLM     | BLEU Score | Rogue Score (R1,R2,RL,RLsum) | BERT Score (Prec., Recall, f1) |
 |----------|-----|----------------|----------------|
 |   OpenAI   | 0.00963 | 0.0721, 0.0199, 0.0556, 0.0550 | 0.8315, 0.8198, 0.8255 |
 |   HuggingFace-Hub  | 0.0212 | 0.1188, 0.0339, 0.0859, 0.0875 | 0.5433, 0.5712, 0.5568 |
 |   Pubmedbert   | 0.0 | 0.0021, 0.0, 0.0022, 0.0021 | 0.8194, 0.7777, 0.7979 |
 
-</center>
-
-<center>Table 3: The Evaluation Metrics of LLMs</center>
+Table 3: The Evaluation Metrics of LLMs
 
 ### 5.3 Evaluation of Contextual Compression
 Building upon the previous section, we maintain GPT-3.5 Turbo as the LLM in our architecture. Our
@@ -357,17 +342,12 @@ textual compression. Here we take again 100 questions from the Pub Med QA datase
 RAGs generate answers for these questions. Since we know the ground truth answers, we can measure
 the similarity between the answers of each RAG against the target answer from the dataset.
 
-<center>
-
 | LLM     | Context Compressed |BLEU Score | Rogue Score (R1,R2,RL,RLsum) | BERT Score (Prec., Recall, f1) |
 |----------|-----|-----|----------------|----------------|
 |   gpt-3.5-turbo | No  | 0.0118 | 0.0677, 0.0199, 0.0507, 0.0514 | 0.8289, 0.8197, 0.8241 |
 |   gpt-3.5-turbo  | Yes | 0.0702 | 0.2395, 0.0897, 0.1781, 0.1788 | 0.8661, 0.8680, 0.8669 |
 
-
-</center>
-
-<center>Table 4: The Evaluation Metrics of LLM before and after context compression</center>
+Table 4: The Evaluation Metrics of LLM before and after context compression
 
 ### 5.4 Risk Analysis
 
