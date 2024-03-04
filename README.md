@@ -33,22 +33,6 @@ By doing so, we are more confident about the answers given now by LLM as they ar
 ## High-end architecture:
 ![Unbenanntes_Diagramm drawio](https://github.com/nokitoino/_Q-A-INLPT-WS2023/assets/18616498/74372a75-16e1-4c3c-b87d-c176e97225ba)
 
-There are two phases to the project architecture:
-Retrieval of the relevant documents 
-Generation of new text from the documents 
-
-Phase 1: Data Retrival
-Step 1: Webscrape the content (title, abstract,authors,references) from PubMed website (https://pubmed.ncbi.nlm.nih.gov/?term=intelligence+%5BTitle%2Fabstract%5D&filter=simsearch1.fha&filter=years.2014-2024&sort=date) from 2014-2024 and store it in JSON format.
-Step 2: There are 2 options:
-1st option : The bulk upload of the json file into Elasticsearch performing customized mappings performing semantic search and providing the relevant documents along with similarity score 
-2nd option : Perform chunking using Langchain RecursivecharacterTextSplitter to perform chunking of 1000 with 200 overlap.(used this option in the project)
-Step 3: Using the OpenAI embedding API, embed the content and store it in the vector store.
-Phase 2: Generation phase 
-Step 1: when the user posts a question on UI (steamlit), it is converted into an embedded API 
-Step 2: The question posted will be paired up with the vectors in the vector store using semantic search, and the most relevant documents (k value = number of relevant documents) with respect to the questions will be provided to LLM 
-Step 3:These documents will be sent in context to the LLM (Medapeca) along with questions in order to generate most suitable answer and displayed in UI with references( most relevant documents).
-
-
 
 ## Documentation
 
